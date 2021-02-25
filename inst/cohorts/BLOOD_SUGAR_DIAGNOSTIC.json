@@ -1,0 +1,114 @@
+{
+  "ExpressionLimit": "All",
+  "CollapseSettings": {
+    "CollapseType": "ERA",
+    "EraPad": 0
+  },
+  "CensorWindow": {},
+  "ConceptSets": [{
+    "expression": {"items": [
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 45717085,
+          "STANDARD_CONCEPT": "N",
+          "CONCEPT_CODE": "006373",
+          "VOCABULARY_ID": "GCN_SEQNO",
+          "CONCEPT_NAME": "BLOOD SUGAR DIAGNOSTIC MISCELL STRIP",
+          "DOMAIN_ID": "Drug",
+          "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+          "CONCEPT_CLASS_ID": "GCN_SEQNO",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 571630,
+          "STANDARD_CONCEPT": "N",
+          "CONCEPT_CODE": "006372",
+          "VOCABULARY_ID": "GCN_SEQNO",
+          "CONCEPT_NAME": "BLOOD SUGAR DIAGNOSTIC MISCELL KIT",
+          "DOMAIN_ID": "Drug",
+          "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+          "CONCEPT_CLASS_ID": "GCN_SEQNO",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 577267,
+          "STANDARD_CONCEPT": "N",
+          "CONCEPT_CODE": "062059",
+          "VOCABULARY_ID": "GCN_SEQNO",
+          "CONCEPT_NAME": "BLOOD SUGAR DIAGNOSTIC, DISC-TYPE MISCELL STRIP",
+          "DOMAIN_ID": "Drug",
+          "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+          "CONCEPT_CLASS_ID": "GCN_SEQNO",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 577284,
+          "STANDARD_CONCEPT": "N",
+          "CONCEPT_CODE": "062084",
+          "VOCABULARY_ID": "GCN_SEQNO",
+          "CONCEPT_NAME": "BLOOD SUGAR DIAGNOSTIC, DRUM-TYPE MISCELL STRIP",
+          "DOMAIN_ID": "Drug",
+          "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+          "CONCEPT_CLASS_ID": "GCN_SEQNO",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      },
+      {
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 577156,
+          "STANDARD_CONCEPT": "N",
+          "CONCEPT_CODE": "061696",
+          "VOCABULARY_ID": "GCN_SEQNO",
+          "CONCEPT_NAME": "BLOOD SUGAR DIAGNOSTIC TEST STRIPS WITH DISPOSABLE METER MISCELL KIT",
+          "DOMAIN_ID": "Drug",
+          "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+          "CONCEPT_CLASS_ID": "GCN_SEQNO",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      }
+    ]},
+    "name": "BLOOD SUGAR DIAGNOSTIC",
+    "id": 1
+  }],
+  "cdmVersionRange": ">=5.0.0",
+  "CensoringCriteria": {"attr_class": "AsIs"},
+  "QualifiedLimit": "First",
+  "InclusionRules": {"attr_class": "AsIs"},
+  "PrimaryCriteria": {
+    "CriteriaList": [{"DrugExposure": {
+      "CodesetId": 1,
+      "DrugTypeExclude": false
+    }}],
+    "PrimaryCriteriaLimit": "All",
+    "ObservationWindow": [
+      0,
+      0
+    ]
+  }
+}

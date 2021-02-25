@@ -1,0 +1,2 @@
+targetCohortId,targetCohortName,outcomeId,outcomeName,modelName,analysisId
+20613,Nori Target 0 Prior 0 Post [v1],20700,Nori Outcome,nori_dementia_model,1

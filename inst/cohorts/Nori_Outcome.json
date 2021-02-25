@@ -1,0 +1,266 @@
+{
+  "ExpressionLimit": "First",
+  "CollapseSettings": {
+    "CollapseType": "ERA",
+    "EraPad": 0
+  },
+  "CensorWindow": {},
+  "ConceptSets": [
+    {
+      "expression": {"items": [{
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 378419,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "26929004",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Alzheimer's disease",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      }]},
+      "name": "ADRD",
+      "id": 0
+    },
+    {
+      "expression": {"items": [
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 715997,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "135447",
+            "VOCABULARY_ID": "RxNorm",
+            "CONCEPT_NAME": "donepezil",
+            "DOMAIN_ID": "Drug",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Ingredient",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 757627,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "4637",
+            "VOCABULARY_ID": "RxNorm",
+            "CONCEPT_NAME": "galantamine",
+            "DOMAIN_ID": "Drug",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Ingredient",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 733523,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "183379",
+            "VOCABULARY_ID": "RxNorm",
+            "CONCEPT_NAME": "rivastigmine",
+            "DOMAIN_ID": "Drug",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Ingredient",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 836654,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "10318",
+            "VOCABULARY_ID": "RxNorm",
+            "CONCEPT_NAME": "tacrine",
+            "DOMAIN_ID": "Drug",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Ingredient",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        }
+      ]},
+      "name": "ADRD drug",
+      "id": 1
+    },
+    {
+      "expression": {"items": [{
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 9201,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "IP",
+          "VOCABULARY_ID": "Visit",
+          "CONCEPT_NAME": "Inpatient Visit",
+          "DOMAIN_ID": "Visit",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Visit",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      }]},
+      "name": "Inpatient visit",
+      "id": 2
+    },
+    {
+      "expression": {"items": [{
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 701322,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "6719",
+          "VOCABULARY_ID": "RxNorm",
+          "CONCEPT_NAME": "memantine",
+          "DOMAIN_ID": "Drug",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Ingredient",
+          "INVALID_REASON": "V"
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      }]},
+      "name": "Memantine",
+      "id": 3
+    }
+  ],
+  "cdmVersionRange": ">=5.0.0",
+  "CensoringCriteria": {"attr_class": "AsIs"},
+  "QualifiedLimit": "First",
+  "InclusionRules": {"attr_class": "AsIs"},
+  "PrimaryCriteria": {
+    "CriteriaList": [
+      {"ConditionOccurrence": {
+        "CorrelatedCriteria": {
+          "CriteriaList": [{
+            "RestrictVisit": false,
+            "StartWindow": {
+              "UseEventEnd": false,
+              "Start": [
+                1,
+                1
+              ],
+              "End": [
+                730,
+                1
+              ],
+              "UseIndexEnd": false
+            },
+            "IgnoreObservationPeriod": false,
+            "Criteria": {"ConditionOccurrence": {
+              "ConditionTypeExclude": false,
+              "CodesetId": 0
+            }},
+            "Occurrence": {
+              "Type": 2,
+              "IsDistinct": false,
+              "Count": 1
+            }
+          }],
+          "Type": "ALL",
+          "DemographicCriteriaList": {"attr_class": "AsIs"},
+          "Groups": {"attr_class": "AsIs"}
+        },
+        "ConditionTypeExclude": false,
+        "CodesetId": 0
+      }},
+      {"DrugExposure": {
+        "CodesetId": 1,
+        "DrugTypeExclude": false
+      }},
+      {"DrugExposure": {
+        "CorrelatedCriteria": {
+          "CriteriaList": [{
+            "RestrictVisit": false,
+            "StartWindow": {
+              "UseEventEnd": false,
+              "Start": [
+                0,
+                -1
+              ],
+              "End": [
+                730,
+                1
+              ],
+              "UseIndexEnd": false
+            },
+            "IgnoreObservationPeriod": false,
+            "Criteria": {"ConditionOccurrence": {
+              "ConditionTypeExclude": false,
+              "CodesetId": 0
+            }},
+            "Occurrence": {
+              "Type": 2,
+              "IsDistinct": false,
+              "Count": 1
+            }
+          }],
+          "Type": "ANY",
+          "DemographicCriteriaList": {"attr_class": "AsIs"},
+          "Groups": {"attr_class": "AsIs"}
+        },
+        "CodesetId": 3,
+        "DrugTypeExclude": false
+      }},
+      {"VisitOccurrence": {
+        "CorrelatedCriteria": {
+          "CriteriaList": [{
+            "RestrictVisit": true,
+            "StartWindow": {
+              "UseEventEnd": false,
+              "Start": [
+                0,
+                -1
+              ],
+              "End": [
+                0,
+                1
+              ],
+              "UseIndexEnd": false
+            },
+            "IgnoreObservationPeriod": false,
+            "Criteria": {"ConditionOccurrence": {
+              "ConditionTypeExclude": false,
+              "CodesetId": 0
+            }},
+            "Occurrence": {
+              "Type": 2,
+              "IsDistinct": false,
+              "Count": 1
+            }
+          }],
+          "Type": "ALL",
+          "DemographicCriteriaList": {"attr_class": "AsIs"},
+          "Groups": {"attr_class": "AsIs"}
+        },
+        "CodesetId": 2,
+        "VisitTypeExclude": false
+      }}
+    ],
+    "PrimaryCriteriaLimit": "First",
+    "ObservationWindow": [
+      0,
+      0
+    ]
+  }
+}
