@@ -1381,7 +1381,7 @@
       "CodesetId": 9,
       "VisitTypeExclude": false,
       "OccurrenceStartDate": [
-        "2014-01-01",
+        "2017-01-01",
         "lt"
       ],
       "Age": {

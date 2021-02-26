@@ -139,7 +139,7 @@ from
 JOIN #Codesets codesets on ((vo.visit_concept_id = codesets.concept_id and codesets.codeset_id = 9))
 ) C
 JOIN @cdm_database_schema.PERSON P on C.person_id = P.person_id
-WHERE C.visit_start_date < DATEFROMPARTS(2014, 01, 01)
+WHERE C.visit_start_date < DATEFROMPARTS(2017, 01, 01)
 AND YEAR(C.visit_start_date) - P.year_of_birth >= 45
 -- End Visit Occurrence Criteria
 
