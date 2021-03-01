@@ -69,7 +69,7 @@ runModel <- function(modelName,
   getPlpSettings$covariateSettings = runSettings$covariateSettings
   plpData <- do.call(PatientLevelPrediction::getPlpData, getPlpSettings)
   
-  PatientLevelPrediction::savePlpData(plpData = plpData, file.path(outputFolder,cdmDatabaseName, 'plpData'))
+  # PatientLevelPrediction::savePlpData(plpData = plpData, file.path(outputFolder,cdmDatabaseName, 'plpData'))
   # plpData <- PatientLevelPrediction::loadPlpData(file.path(outputFolder,cdmDatabaseName, 'plpData'))
   
   # get population
