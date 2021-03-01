@@ -196,6 +196,21 @@ execute <- function(connectionDetails,
  
       if(recalibrate){
         # add code here
+        misCal <- PatientLevelPrediction:::calibrationWeak(result$prediction)
+        predictionWeak <- result$prediction
+        predictionWeak$value[predictionWeak$value==0] <- 0.000000000000001
+        predictionWeak$value[predictionWeak$value==1] <- 1-0.000000000000001
+        predictionWeak$value <- log(predictionWeak$value/(1-predictionWeak$value))
+        predictionWeak$value <- 1/(1+exp(-1*(predictionWeak$value*misCal$gradient+misCal$intercept)))
+        
+        result$prediction <- predictionWeak
+        performance <- PatientLevelPrediction::evaluatePlp(result$prediction, plpData)
+        
+        # reformatting the performance 
+        # analysisId <-   analysisSettings$analysisId[i]
+        # performance <- reformatePerformance(performance,analysisId)
+        
+        result$performanceEvaluation <- performance
       }
       
       if(!dir.exists(file.path(outputFolder,cdmDatabaseName))){
