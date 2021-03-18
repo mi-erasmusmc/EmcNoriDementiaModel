@@ -204,6 +204,8 @@ execute <- function(connectionDetails,
         predictionWeak$value <- 1/(1+exp(-1*(predictionWeak$value*misCal$gradient+misCal$intercept)))
         
         result$prediction <- predictionWeak
+        plpData <- PatientLevelPrediction::loadPlpData(file.path(outputFolder,cdmDatabaseName, 'plpData'))
+        
         performance <- PatientLevelPrediction::evaluatePlp(result$prediction, plpData)
         
         # reformatting the performance 
